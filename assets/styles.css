@@ -848,6 +848,35 @@ section.when-section .when-container {
     margin-top: 2rem;
 }
 
+/* #region WHY US STYLES*/
+.about-section {
+    background: url(img/whybanner.webp) no-repeat center center;
+    background-size: cover;
+    text-align: left;
+    padding: 100px 0;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .about-section {
+        padding: 0;
+    }
+}
+
+.about-content {
+    max-width: 580px;
+    gap: 1rem;
+}
+
+.about-content p {
+    font-size: var(--heading-caption);
+    font-weight: bold;
+}
+
+.about-content .btn {
+    margin-top: 2rem;
+}
+
 /* #endregion */
 
 /* #region FOOTER */
@@ -1119,5 +1148,213 @@ section.when-section .when-container {
 @media(max-width:500px) {
     .reviews-grid {
         grid-auto-columns: 90%;
+    }
+}
+
+/* What to expect */
+.expect-container {
+    background: #F5F0E7;
+}
+
+.expect-container .expect-title p {
+    max-width: 620px;
+    text-align: center;
+    margin: 20px auto 60px;
+}
+
+.expect-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.expect-grid .expect-item {
+    display: flex;
+}
+
+.expect-item .content-column.desktop {
+    display: flex;
+}
+.expect-item img.mobile {
+    display: none;
+}
+
+.expect-grid .expect-item .content-column {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.expect-grid .expect-item .content-column img {
+    width: 100%;
+}
+
+.expect-grid .expect-item .content-number {
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.expect-grid > .expect-item:nth-child(1) .content-number .number {
+    margin: auto;
+}
+
+.expect-grid > .expect-item:nth-child(2) .content-number .number {
+    margin: auto;
+}
+
+.expect-grid > .expect-item:nth-child(3) .content-number .number {
+    margin: auto;
+}
+
+.expect-grid .expect-item .content-number .number {
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 32px;
+    width: 59px; 
+    height: 59px;
+    min-height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #A7A7A7; 
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.expect-grid .expect-item .content-number .number-line {
+    height: 100%;
+    width: 2px;
+    background: #B8B8B8;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.expect-grid > .expect-item:nth-child(1) .content-number .number-line {
+    height: 50%;
+    bottom: 0;
+}
+
+.expect-grid > .expect-item:nth-child(3) .content-number .number-line {
+    height: 50%;
+    top: 0;
+}
+
+.expect-item .content-column .mobile {
+    display: none !important;
+}
+
+.expect-item h4 {
+    font-size: 28px;
+}
+
+@media (max-width: 991px) {
+    .expect-item .content-column {
+        width: 65% !important;
+        margin-left: auto;
+    }
+    .expect-grid .expect-item .content-number
+    {
+        width: 25%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .expect-item .content-column.desktop {
+        display: none !important;
+    }
+    .expect-item img {
+        margin-bottom: 25px;
+        padding-top: 40px;
+    }
+    .expect-item img.mobile {
+        display: flex;
+    }
+    .expect-item .content-column .mobile {
+        display: block !important;
+    }
+}
+
+/* Table section */
+.table-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #FFF;
+    gap: 60px;
+}
+
+.table-inner {
+  gap: 30px;
+  padding: 2rem 40px 2rem 0;
+}
+
+@media (max-width: 991px) {
+    .table-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .table-grid .table-inner {
+        padding: 0;
+    }
+}
+
+/* Contact */
+.contact-form-section {
+    background: #F5F0E7;
+}
+
+.contact-form-container .form-container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 5rem 2rem;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+}
+
+.contact-form-container .when-inner {
+    padding-left: 70px;
+    width: 50%;
+}
+
+.contact-form-container .contact-form-right {
+    width: 50%;
+    border-left: 2px solid #000000;
+}
+
+.contact-form-grid {
+display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  background: #FFF;
+}
+
+.contact-form-grid p {
+ margin: 0;
+}
+
+@media (max-width: 991px) {
+    .contact-form-grid {
+        flex-direction: column;
+    }
+    .contact-form-container .when-inner {
+        padding: 2rem;
+        width: 100%;
+    }
+    
+    .contact-form-container .contact-form-right {
+        width: 100%;
+        border-left: none;
+    }
+    .contact-form-container .form-container {
+        padding: 1rem 2rem 2rem;
     }
 }
