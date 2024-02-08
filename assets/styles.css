@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('fonts/Cera Pro Regular Italic.woff2') format('woff2');
+    src: url('fonts/Cera Pro.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -72,7 +72,8 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Gotham', sans-serif;
+    /* font-family: 'Gotham', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     color: black;
 }
 
@@ -111,6 +112,7 @@ h5 {
 
 .regular-text {
     font-size: var(--banner-p);
+    line-height: 27px;
 }
 
 .banner .regular-text {
@@ -346,6 +348,7 @@ body.menu-open {
 
 .banner-badges {
     gap: 40px;
+    padding-top: 30px;
     width: max-content;
     margin-top: 2vw;
 }
@@ -363,7 +366,6 @@ body.menu-open {
     overflow: hidden;
     white-space: nowrap;
     background: var(--Main-Green);
-    /* Example background color */
 }
 
 .unique-slider {
@@ -390,9 +392,9 @@ body.menu-open {
 }
 
 .unique-slide {
-    font-family: 'Cera Pro', sans-serif;
+    font-family: 'Cera Pro Medium', sans-serif;
     font-style: italic;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1.82px;
     text-transform: uppercase;
     color: white;
@@ -521,10 +523,11 @@ body.menu-open {
     margin-block: 0;
     font-size: var(--announcement);
     color: black;
+    padding-top: 5px;
 }
 
 .review-text {
-    font-family: "Cera Pro Medium", sans-serif;
+    font-family: "Cera Pro", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: var(--announcement);
@@ -566,6 +569,10 @@ body.menu-open {
     gap: 10px;
     justify-content: center;
     margin-bottom: 1em;
+}
+
+.resolve-debt-items img {
+    width: 20px;
 }
 
 .debt-item {
@@ -616,6 +623,10 @@ body.menu-open {
 .struggle-content {
     max-width: 580px;
     z-index: 2;
+}
+
+.struggle-content p {
+    padding-block: 15px;
 }
 
 .struggle-section h1 {
@@ -684,7 +695,7 @@ section.when-section .when-container {
 }
 
 .when-checklist {
-    gap: 10px;
+    gap: 16px;
 }
 
 .when-checklist .flex {
@@ -827,7 +838,7 @@ section.when-section .when-container {
 
 /* #region WHY US STYLES*/
 .why-debt-relief-section {
-    background: url(img/whybanner.webp) no-repeat center center;
+    background: url(img/newwhy.webp) no-repeat center center;
     background-size: cover;
     text-align: left;
     padding: 100px 0;
@@ -835,7 +846,7 @@ section.when-section .when-container {
 }
 
 .why-debt-relief-content {
-    max-width: 580px;
+    max-width: 750px;
     gap: 1rem;
 }
 
@@ -850,7 +861,7 @@ section.when-section .when-container {
 
 /* #region WHY US STYLES*/
 .about-section {
-    background: url(img/whybanner.webp) no-repeat center center;
+    background: url(img/newwhy.webp) no-repeat center center;
     background-size: cover;
     text-align: left;
     padding: 100px 0;
@@ -864,7 +875,7 @@ section.when-section .when-container {
 }
 
 .about-content {
-    max-width: 580px;
+    max-width: 750px;
     gap: 1rem;
 }
 
@@ -1160,6 +1171,8 @@ section.when-section .when-container {
     max-width: 620px;
     text-align: center;
     margin: 20px auto 60px;
+    line-height: 30px;
+    font-weight: 600;
 }
 
 .expect-grid {
@@ -1174,6 +1187,7 @@ section.when-section .when-container {
 .expect-item .content-column.desktop {
     display: flex;
 }
+
 .expect-item img.mobile {
     display: none;
 }
@@ -1183,10 +1197,15 @@ section.when-section .when-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top: 4rem;
+}
+
+.expect-grid .expect-item .content-column p {
+    font-weight: 500;
 }
 
 .expect-grid .expect-item .content-column img {
-    width: 100%;
+    width: 90%;
 }
 
 .expect-grid .expect-item .content-number {
@@ -1196,15 +1215,15 @@ section.when-section .when-container {
     flex-direction: column;
 }
 
-.expect-grid > .expect-item:nth-child(1) .content-number .number {
+.expect-grid>.expect-item:nth-child(1) .content-number .number {
     margin: auto;
 }
 
-.expect-grid > .expect-item:nth-child(2) .content-number .number {
+.expect-grid>.expect-item:nth-child(2) .content-number .number {
     margin: auto;
 }
 
-.expect-grid > .expect-item:nth-child(3) .content-number .number {
+.expect-grid>.expect-item:nth-child(3) .content-number .number {
     margin: auto;
 }
 
@@ -1212,14 +1231,14 @@ section.when-section .when-container {
     margin: 0 auto;
     font-weight: 900;
     font-size: 32px;
-    width: 59px; 
+    width: 59px;
     height: 59px;
     min-height: 59px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 1px solid #A7A7A7; 
+    border: 1px solid #A7A7A7;
     position: relative;
     z-index: 10;
     background-color: #fff;
@@ -1235,12 +1254,12 @@ section.when-section .when-container {
     transform: translateX(-50%);
 }
 
-.expect-grid > .expect-item:nth-child(1) .content-number .number-line {
+.expect-grid>.expect-item:nth-child(1) .content-number .number-line {
     height: 50%;
     bottom: 0;
 }
 
-.expect-grid > .expect-item:nth-child(3) .content-number .number-line {
+.expect-grid>.expect-item:nth-child(3) .content-number .number-line {
     height: 50%;
     top: 0;
 }
@@ -1258,23 +1277,27 @@ section.when-section .when-container {
         width: 65% !important;
         margin-left: auto;
     }
-    .expect-grid .expect-item .content-number
-    {
+
+    .expect-grid .expect-item .content-number {
         width: 25%;
         position: relative;
         display: flex;
         flex-direction: column;
     }
+
     .expect-item .content-column.desktop {
         display: none !important;
     }
+
     .expect-item img {
         margin-bottom: 25px;
         padding-top: 40px;
     }
+
     .expect-item img.mobile {
         display: flex;
     }
+
     .expect-item .content-column .mobile {
         display: block !important;
     }
@@ -1282,15 +1305,15 @@ section.when-section .when-container {
 
 /* Table section */
 .table-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     align-items: center;
     background: #FFF;
-    gap: 60px;
+    gap: 5px;
 }
 
 .table-inner {
-  gap: 30px;
-  padding: 2rem 40px 2rem 0;
+    gap: 30px;
+    padding: 2rem 40px 2rem 0;
 }
 
 @media (max-width: 991px) {
@@ -1299,6 +1322,7 @@ section.when-section .when-container {
         flex-direction: column;
         gap: 40px;
     }
+
     .table-grid .table-inner {
         padding: 0;
     }
@@ -1331,30 +1355,36 @@ section.when-section .when-container {
 }
 
 .contact-form-grid {
-display: flex;
-  align-items: center;
-  border: 2px solid #000;
-  background: #FFF;
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    background: #FFF;
 }
 
 .contact-form-grid p {
- margin: 0;
+    margin: 0;
 }
 
 @media (max-width: 991px) {
     .contact-form-grid {
         flex-direction: column;
     }
+
     .contact-form-container .when-inner {
         padding: 2rem;
         width: 100%;
     }
-    
+
     .contact-form-container .contact-form-right {
         width: 100%;
         border-left: none;
     }
+
     .contact-form-container .form-container {
         padding: 1rem 2rem 2rem;
+    }
+
+    .why-debt-relief-content {
+        max-width: 100%;
     }
 }
